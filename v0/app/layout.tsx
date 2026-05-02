@@ -1,17 +1,29 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "v0 Project",
-  description: "Base project for v0 generated UI"
+  title: "Deep — AI Sales CRM",
+  description:
+    "AI-powered sales CRM for tracking deals, pipeline health, and customer conversations.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#3d0f5c",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
-      <body>{children}</body>
+    <html lang="en" className={`${inter.variable} bg-background`}>
+      <body className="font-sans text-foreground antialiased">{children}</body>
     </html>
   );
 }
