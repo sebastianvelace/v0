@@ -18,12 +18,12 @@ export function AnalyticsView() {
             How is your pipeline trending?
           </h2>
           <div className="flex items-center gap-3 text-xs text-muted-foreground">
-            <LegendDot color="#ffd54f" label="Forecast" />
-            <LegendDot color="#f48fb1" label="Booked" />
+            <LegendDot color="#fbbf24" label="Forecast" />
+            <LegendDot color="#86efac" label="Booked" />
             <span className="inline-flex items-center gap-1">
               <span
                 className="inline-block h-px w-4 border-t-2 border-dashed"
-                style={{ borderColor: "#26c6c2" }}
+                style={{ borderColor: "#34b7f1" }}
                 aria-hidden
               />
               Target

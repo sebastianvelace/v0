@@ -1,41 +1,41 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — deep purple sidebar, magenta-purple primary, hot pink accent */
-  --color-background: #f4f4f8;
-  --color-foreground: #1a1320;
-  --color-muted: #f1eef5;
-  --color-muted-foreground: #6b6577;
-  --color-border: #e6e3ec;
+  /* Brand palette — WhatsApp-inspired greens */
+  --color-background: #f0f2f5;
+  --color-foreground: #111b21;
+  --color-muted: #eaf3ee;
+  --color-muted-foreground: #54656f;
+  --color-border: #d8e1dc;
 
   --color-card: #ffffff;
-  --color-card-foreground: #1a1320;
+  --color-card-foreground: #111b21;
 
-  /* Sidebar gradient anchors */
-  --color-sidebar: #3d0f5c;
-  --color-sidebar-light: #5b1a8a;
-  --color-sidebar-foreground: #f3e8ff;
-  --color-sidebar-active: #a020f0;
+  /* Sidebar (deep WhatsApp green) */
+  --color-sidebar: #054640;
+  --color-sidebar-light: #0a6e5e;
+  --color-sidebar-foreground: #d9f5e3;
+  --color-sidebar-active: #25d366;
 
-  /* Primary brand (magenta-purple) */
-  --color-primary: #a020f0;
+  /* Primary brand (bright WhatsApp green) */
+  --color-primary: #25d366;
   --color-primary-foreground: #ffffff;
-  --color-primary-soft: #f3e6fc;
+  --color-primary-soft: #dcf8c6;
 
-  /* Accent (hot pink) */
-  --color-accent: #e91e9d;
+  /* Accent (deep teal) */
+  --color-accent: #128c7e;
   --color-accent-foreground: #ffffff;
-  --color-accent-soft: #fde4f1;
+  --color-accent-soft: #d4f1eb;
 
   /* Chart colors used by the pipeline stacked bars */
-  --color-chart-1: #a020f0; /* purple */
-  --color-chart-2: #e91e9d; /* magenta */
-  --color-chart-3: #6b1f9e; /* deep purple */
-  --color-chart-4: #4a148c; /* darkest */
-  --color-chart-5: #29b6f6; /* sky blue */
-  --color-chart-line-1: #ffd54f; /* yellow line */
-  --color-chart-line-2: #f48fb1; /* light pink line */
-  --color-chart-target: #26c6c2; /* teal target */
+  --color-chart-1: #25d366; /* bright green */
+  --color-chart-2: #128c7e; /* teal */
+  --color-chart-3: #0a6e5e; /* deep teal */
+  --color-chart-4: #054640; /* darkest */
+  --color-chart-5: #34b7f1; /* WhatsApp blue */
+  --color-chart-line-1: #fbbf24; /* amber line */
+  --color-chart-line-2: #86efac; /* light green line */
+  --color-chart-target: #34b7f1; /* blue target */
 
   --color-warning: #f4b400;
   --color-danger: #ef4444;
@@ -64,23 +64,23 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle pink glow used in a few backgrounds, matches the screenshots */
+/* Subtle green glow used in a few backgrounds */
 .brand-glow::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(60% 40% at 100% 0%, rgba(233, 30, 157, 0.08), transparent 60%),
-    radial-gradient(40% 30% at 0% 100%, rgba(160, 32, 240, 0.06), transparent 60%);
+    radial-gradient(60% 40% at 100% 0%, rgba(37, 211, 102, 0.08), transparent 60%),
+    radial-gradient(40% 30% at 0% 100%, rgba(18, 140, 126, 0.08), transparent 60%);
 }
 
-/* Ring used for the AI search input (purple glow) */
+/* Ring used for the AI search input (green glow) */
 .ai-ring {
   box-shadow:
     0 0 0 1px var(--color-primary),
-    0 0 0 4px rgba(160, 32, 240, 0.15),
-    0 8px 24px -8px rgba(160, 32, 240, 0.35);
+    0 0 0 4px rgba(37, 211, 102, 0.18),
+    0 8px 24px -8px rgba(37, 211, 102, 0.4);
 }
 
 /* Hide native scrollbars on horizontal timelines */

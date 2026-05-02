@@ -151,7 +151,7 @@ Alex`,
               <div className="flex items-center gap-2">
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-[0_8px_18px_-6px_rgba(160,32,240,0.55)] transition hover:bg-[#8a1ad6]"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-[0_8px_18px_-6px_rgba(37,211,102,0.55)] transition hover:bg-[#1ebe5a]"
                 >
                   <Send className="h-3.5 w-3.5" />
                   Send

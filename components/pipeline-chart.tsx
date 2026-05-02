@@ -31,7 +31,7 @@ function TargetPillLabel({ viewBox }: LabelProps) {
         ry={11}
         width={104}
         height={22}
-        fill="#26c6c2"
+        fill="#34b7f1"
       />
       <text
         x={x + 52}
@@ -57,7 +57,7 @@ export function PipelineChart() {
           barCategoryGap="32%"
         >
           <CartesianGrid
-            stroke="#ece8f0"
+            stroke="#e3ece6"
             strokeDasharray="0"
             vertical={false}
           />
@@ -65,56 +65,56 @@ export function PipelineChart() {
             dataKey="week"
             tickLine={false}
             axisLine={false}
-            tick={{ fill: "#6b6577", fontSize: 12 }}
+            tick={{ fill: "#54656f", fontSize: 12 }}
             dy={8}
           />
           <YAxis
             tickLine={false}
             axisLine={false}
-            tick={{ fill: "#6b6577", fontSize: 12 }}
+            tick={{ fill: "#54656f", fontSize: 12 }}
             tickFormatter={formatY}
             ticks={[0, 5, 10, 15, 20, 25]}
             domain={[0, 25]}
           />
           <Tooltip
-            cursor={{ fill: "rgba(160,32,240,0.06)" }}
+            cursor={{ fill: "rgba(37,211,102,0.08)" }}
             contentStyle={{
               borderRadius: 12,
-              border: "1px solid #e6e3ec",
+              border: "1px solid #d8e1dc",
               fontSize: 12,
             }}
             formatter={(v: number) => `$${v.toFixed(1)}M`}
           />
 
-          {/* Stacked bars */}
-          <Bar dataKey="closed" stackId="pipe" fill="#29b6f6" radius={[0, 0, 4, 4]} />
-          <Bar dataKey="expansion" stackId="pipe" fill="#4a148c" />
-          <Bar dataKey="negotiation" stackId="pipe" fill="#6b1f9e" />
-          <Bar dataKey="proposal" stackId="pipe" fill="#a020f0" />
-          <Bar dataKey="qualified" stackId="pipe" fill="#e91e9d" radius={[6, 6, 0, 0]} />
+          {/* Stacked bars (greens, top is brightest) */}
+          <Bar dataKey="closed" stackId="pipe" fill="#34b7f1" radius={[0, 0, 4, 4]} />
+          <Bar dataKey="expansion" stackId="pipe" fill="#054640" />
+          <Bar dataKey="negotiation" stackId="pipe" fill="#0a6e5e" />
+          <Bar dataKey="proposal" stackId="pipe" fill="#128c7e" />
+          <Bar dataKey="qualified" stackId="pipe" fill="#25d366" radius={[6, 6, 0, 0]} />
 
           {/* Line overlays */}
           <Line
             type="monotone"
             dataKey="forecast"
-            stroke="#ffd54f"
+            stroke="#fbbf24"
             strokeWidth={2.5}
-            dot={{ r: 4, fill: "#ffd54f", stroke: "#fff", strokeWidth: 2 }}
+            dot={{ r: 4, fill: "#fbbf24", stroke: "#fff", strokeWidth: 2 }}
             activeDot={{ r: 5 }}
           />
           <Line
             type="monotone"
             dataKey="booked"
-            stroke="#f48fb1"
+            stroke="#86efac"
             strokeWidth={2.5}
-            dot={{ r: 4, fill: "#f48fb1", stroke: "#fff", strokeWidth: 2 }}
+            dot={{ r: 4, fill: "#86efac", stroke: "#fff", strokeWidth: 2 }}
             activeDot={{ r: 5 }}
           />
 
           {/* Target reference line */}
           <ReferenceLine
             y={15}
-            stroke="#26c6c2"
+            stroke="#34b7f1"
             strokeDasharray="6 4"
             strokeWidth={2}
             label={<TargetPillLabel />}

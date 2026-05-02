@@ -111,7 +111,7 @@ export function DealInsightsPanel({ deal, onClose, onAsk }: Props) {
         </div>
 
         {/* Content */}
-        <div className="mt-5 rounded-2xl border border-primary/40 bg-card p-5 shadow-[0_8px_24px_-12px_rgba(160,32,240,0.25)]">
+        <div className="mt-5 rounded-2xl border border-primary/40 bg-card p-5 shadow-[0_8px_24px_-12px_rgba(37,211,102,0.25)]">
           {tab === "brief" ? <BriefContent /> : <EmptyTab tab={tab} />}
         </div>
 
