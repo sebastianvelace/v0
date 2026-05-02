@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — WhatsApp-inspired greens */
+  --color-background: #f0f2f5;
+  --color-foreground: #111b21;
+  --color-muted: #eaf3ee;
+  --color-muted-foreground: #54656f;
+  --color-border: #d8e1dc;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #111b21;
+
+  /* Sidebar (deep WhatsApp green) */
+  --color-sidebar: #054640;
+  --color-sidebar-light: #0a6e5e;
+  --color-sidebar-foreground: #d9f5dc;
+  --color-sidebar-active: #25d366;
+
+  /* Primary brand (bright WhatsApp green) */
+  --color-primary: #25d366;
+  --color-primary-foreground: #ffffff;
+  --color-primary-soft: #dcf8c6;
+
+  /* Accent (deep teal) */
+  --color-accent: #128c7e;
+  --color-accent-foreground: #ffffff;
+  --color-accent-soft: #d4f1eb;
+
+  /* Chart colors used by the pipeline stacked bars */
+  --color-chart-1: #25d366; /* bright green */
+  --color-chart-2: #128c7e; /* teal */
+  --color-chart-3: #0a6e5e; /* deep teal */
+  --color-chart-4: #054640; /* darkest */
+  --color-chart-5: #34b7f1; /* WhatsApp blue */
+  --color-chart-line-1: #fbbf24; /* amber line */
+  --color-chart-line-2: #86efac; /* light green line */
+  --color-chart-target: #34b7f1; /* blue target */
+
+  --color-warning: #f4b400;
+  --color-danger: #ef4444;
+
+  --radius: 0.875rem;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle green glow used in a few backgrounds */
+.brand-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 40% at 100% 0%, rgba(37, 211, 102, 0.08), transparent 60%),
+    radial-gradient(40% 30% at 0% 100%, rgba(18, 140, 126, 0.08), transparent 60%);
+}
+
+/* Ring used for the AI search input (green glow) */
+.ai-ring {
+  box-shadow:
+    0 0 0 1px var(--color-primary),
+    0 0 0 4px rgba(37, 211, 102, 0.18),
+    0 8px 24px -8px rgba(37, 211, 102, 0.4);
+}
+
+/* Hide native scrollbars on horizontal timelines */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
