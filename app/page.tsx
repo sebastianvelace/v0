@@ -184,6 +184,7 @@ export default function HomePage() {
           <DealsList
             selectedId={selectedDeal?.id ?? null}
             onSelect={handleSelectDeal}
+            onCompose={() => setComposerOpen(true)}
             focusFirst={!selectedDeal}
           />
         ) : null}
